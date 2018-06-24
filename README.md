@@ -1,0 +1,2 @@
+# Smriti
+Documentation
