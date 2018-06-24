@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Smriti Documentation &mdash; smriti_ai 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installing.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> smriti_ai
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Architecture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Smriti Architecture</a></li>
+</ul>
+<p class="caption"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">Routes</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">smriti_ai</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Smriti Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="smriti-documentation">
+<h1>Smriti Documentation<a class="headerlink" href="#smriti-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This documentation consists of the flow of the entire codebase of the Smriti.</p>
+<div class="section" id="installing-modules">
+<h2>Installing Modules<a class="headerlink" href="#installing-modules" title="Permalink to this headline">¶</a></h2>
+<p>Navigate to the root directory of the project where app.js is located
+using <code class="docutils literal"><span class="pre">cd</span></code> and run below command to install all the required modules:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">cd</span> <span class="n">smriti</span><span class="o">/</span>
+
+<span class="o">&gt;&gt;</span> <span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-web-app">
+<h2>Running the Web-app<a class="headerlink" href="#running-the-web-app" title="Permalink to this headline">¶</a></h2>
+<p>We have set two environment for the entire codebase following as:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Development</span></code> (Used in development phase)</li>
+<li><code class="docutils literal"><span class="pre">Production</span></code> (Used in Live mode)</li>
+</ul>
+<p>These two environment are implemented in <code class="docutils literal"><span class="pre">config</span></code> directory.</p>
+<div class="section" id="running-front-end-server">
+<h3>Running Front-end Server<a class="headerlink" href="#running-front-end-server" title="Permalink to this headline">¶</a></h3>
+<p>To run the front-end part of the web app in development mode use command
+in the root directory where app.js is located:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">NODE_ENV</span><span class="o">=</span><span class="n">development</span> <span class="n">nodemon</span> <span class="n">app</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-back-end-server">
+<h3>Running Back-end Server<a class="headerlink" href="#running-back-end-server" title="Permalink to this headline">¶</a></h3>
+<p>To run the back-end part of the web app in the same mode, run the Flask_API
+notebook file in the localhost using:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
+<p>This will run the jupyter notebook in your localhost, then navigate to the
+flask_api directory and run the flask_api_smriti notebook file to start the
+backend server, which will run on port #3300 and will look something like
+this, in the web browser:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8888</span><span class="o">/</span><span class="n">notebooks</span><span class="o">/</span><span class="n">smriti_raghuvar</span><span class="o">/</span><span class="n">flask_api</span><span class="o">/</span><span class="n">Flask_API_Smriti_Review</span><span class="o">.</span><span class="n">ipynb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="used-tools-frameworks">
+<h2>Used Tools &amp; Frameworks<a class="headerlink" href="#used-tools-frameworks" title="Permalink to this headline">¶</a></h2>
+<p>We have used following tools and framworks to implement end-to-end product.</p>
+<div class="section" id="languages">
+<h3>Languages<a class="headerlink" href="#languages" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="for-front-end">
+<h3>For Front-end:<a class="headerlink" href="#for-front-end" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><cite>HTML &amp; CSS</cite></li>
+<li><cite>JQuery</cite></li>
+<li><cite>JavsScript</cite></li>
+<li><cite>Pug (Template engine for NodeJs)</cite></li>
+</ul>
+</div>
+<div class="section" id="for-back-end">
+<h3>For Back-end:<a class="headerlink" href="#for-back-end" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><cite>NodeJs</cite></li>
+<li><cite>ExpressJs</cite></li>
+<li><cite>JavsScript</cite></li>
+<li><cite>MongoDB for Database</cite></li>
+<li><cite>Flask for running backend server</cite></li>
+</ul>
+<div class="section" id="tools">
+<h4>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><cite>Python</cite></li>
+<li><cite>npm</cite></li>
+<li><cite>node</cite></li>
+<li><cite>nodemon</cite></li>
+<li><cite>Jupyter Notebook</cite></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="overview-of-entire-codebase">
+<h2>Overview of Entire Codebase<a class="headerlink" href="#overview-of-entire-codebase" title="Permalink to this headline">¶</a></h2>
+<p>Entire codebase of the Smriti is divided into 3 principal components:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Authentication</span></code></li>
+<li><code class="docutils literal"><span class="pre">Review</span></code></li>
+<li><code class="docutils literal"><span class="pre">Drafting</span></code></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>All the authentication modules(log-in, signup) are implemented in the authRoute file.</li>
+<li>All the APIs related to review modules are implemented in the reviewRoute file.</li>
+<li>All the APIs related to drafting modules are implemented in the draftRoute file.</li>
+</ul>
+<hr class="docutils" />
+<p>For detailed description of the routes file visit Routes section
+<a class="reference external" href="routes.html">Routes</a>.</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#via-npm-package-manager">Via npm package manager</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Architecture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Smriti Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#directory-structure-of-smriti">Directory Structure of Smriti</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">Routes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#authroute">AuthRoute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#reviewroute">ReviewRoute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#draftroute">DraftRoute</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installing.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Raghuvar.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            LANGUAGE:'en',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
